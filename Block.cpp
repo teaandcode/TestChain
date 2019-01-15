@@ -24,11 +24,12 @@ void Block::MineBlock(uint32_t nDifficulty)
 
     string str(cstr);
 
-    while (sHash.substr(0, nDifficulty) != str)
+    do
     {
         _nNonce++;
         sHash = _CalculateHash();
     }
+    while (sHash.substr(0, nDifficulty) != str);
 
     cout << "Block mined: " << sHash << endl;
 }
