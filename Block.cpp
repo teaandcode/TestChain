@@ -15,7 +15,12 @@ Block::Block(uint32_t nIndexIn, const string &sDataIn) : _nIndex(nIndexIn), _sDa
 
 void Block::MineBlock(uint32_t nDifficulty)
 {
-    char cstr[nDifficulty + 1];
+#if (_MSC_VER >= 1500)
+	char* cstr = new char[nDifficulty + 1];
+#else
+	char cstr[nDifficulty + 1];
+#endif
+
     for (uint32_t i = 0; i < nDifficulty; ++i)
     {
         cstr[i] = '0';
@@ -32,6 +37,10 @@ void Block::MineBlock(uint32_t nDifficulty)
     while (sHash.substr(0, nDifficulty) != str);
 
     cout << "Block mined: " << sHash << endl;
+
+#if (_MSC_VER >= 1500)
+	delete[] cstr;
+#endif
 }
 
 inline string Block::_CalculateHash() const
