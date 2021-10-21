@@ -39,7 +39,7 @@ A blockchain is made up of a series of blocks which contain data and each block 
 
 So let’s create our block class, add the following lines to the **Block.h** header file:
 
-```{.cpp .numberLines}
+```cpp
 class Block {
 public:
     string sPrevHash;
