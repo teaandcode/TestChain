@@ -85,7 +85,7 @@ They tell the compiler to include the cstdint, and vector libraries, as well as 
 
 Now let’s create our blockchain class, add the following lines to the **Blockchain.h** header file:
 
-```c {.line-numbers}
+```c
 class Blockchain {
 public:
     Blockchain();
@@ -99,4 +99,5 @@ private:
     Block _GetLastBlock() const;
 };
 ```
+
 As with our block class, we’re keeping things simple and calling our blockchain class Blockchain (line 1) followed by the public modifier (line 2) and the constructor signature (line 3). The AddBlock signature (line 5) takes a parameter bNew which must be an object of the Block class we created earlier. We then specify the private modifier (line 7) followed by the private variables for _nDifficulty, and _vChain (lines 8–9) as well as the method signature for _GetLastBlock (line 11) which is also followed by the const keyword to denote that the output of the method cannot be changed.
