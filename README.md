@@ -1,6 +1,8 @@
 # BUILD A BLOCKCHAIN WITH C++
 
-Here are the files for the TestChain C++ tutorial I have placed on my website http://davenash.com/2017/10/build-a-blockchain-with-c/
+Here are the files for the TestChain C++ tutorial I have placed on my website [BUILD A BLOCKCHAIN WITH C++](http://davenash.com/2017/10/build-a-blockchain-with-c/)
+
+
 
  So, you might have heard a lot about something called a blockchain lately and wondered what all the fuss is about. A blockchain is a ledger which has been written in such a way that updating the data contained within it becomes very difficult, some say the blockchain is immutable and to all intents and purposes they’re right but immutability suggests permanence and nothing on a hard drive could ever be considered permanent. Anyway, we’ll leave the philosophical debate to the non-techies; you’re looking for someone to show you how to write a blockchain in C++, so that’s exactly what I’m going to do.
 
@@ -83,7 +85,7 @@ They tell the compiler to include the cstdint, and vector libraries, as well as 
 
 Now let’s create our blockchain class, add the following lines to the **Blockchain.h** header file:
 
-```{.cpp .numberLines}
+```c {.line-numbers}
 class Blockchain {
 public:
     Blockchain();
